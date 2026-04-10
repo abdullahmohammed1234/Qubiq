@@ -30,7 +30,7 @@ const TutorPanel = forwardRef((props, ref) => {
     {
       id: 1,
       role: 'ai',
-      content: "Welcome to Qubiq! I'm your quantum computing tutor. Ask me anything about qubits, quantum gates, superposition, entanglement, or any other quantum computing concept. I'm here to help you learn!",
+      content: "Welcome to Qubiq! I'm your quantum computing tutor powered by Google Gemini. Ask me anything about qubits, quantum gates, superposition, entanglement, or any other quantum computing concept. I'm here to help you learn!",
       timestamp: new Date()
     }
   ])
@@ -83,8 +83,7 @@ const TutorPanel = forwardRef((props, ref) => {
     setIsLoading(true)
 
     try {
-      // Try to call the backend API
-      const response = await fetch('/api/ask', {
+      const response = await fetch('http://localhost:8001/api/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -139,7 +138,7 @@ const TutorPanel = forwardRef((props, ref) => {
       <div className="tutor-header">
         <div className="tutor-title">Quantum AI Tutor</div>
         <div className="tutor-subtitle">
-          Ask me anything about quantum computing
+          Powered by Google Gemini
         </div>
       </div>
 

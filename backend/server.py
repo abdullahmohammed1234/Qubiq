@@ -265,7 +265,7 @@ async def system_status():
 # QUANTUM SIMULATION ENDPOINT
 # ============================================================================
 
-@app.post("/simulate", response_model=SimulateResponse)
+@app.post("/api/simulate", response_model=SimulateResponse)
 async def simulate_circuit(request: SimulateRequest):
     """
     Simulate a 1-qubit quantum circuit using Qiskit.
@@ -475,7 +475,7 @@ async def rebuild_index(request: IngestRequest = IngestRequest()):
         )
 
 
-@app.post("/ask", response_model=AskResponse)
+@app.post("/api/ask", response_model=AskResponse)
 async def ask_question(request: AskRequest):
     """
     Ask a quantum computing question.

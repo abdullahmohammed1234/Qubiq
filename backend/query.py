@@ -17,6 +17,10 @@ import pickle
 from typing import List, Tuple, Dict, Any, Optional
 import numpy as np
 
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 # For embeddings
 from sentence_transformers import SentenceTransformer
 
