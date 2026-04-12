@@ -52,7 +52,7 @@ except ImportError:
 # ============================================================================
 
 # Gemini model configuration
-GEMINI_MODEL_NAME = "gemini-2.0-flash"  # Fast and capable model
+GEMINI_MODEL_NAME = "gemini-2.5-flash-lite"  # Fast and capable model
 GEMINI_TEMPERATURE = 0.3                # Low temperature for factual consistency
 GEMINI_MAX_TOKENS = 500                 # Limit response length
 
